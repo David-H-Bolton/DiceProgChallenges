@@ -1,0 +1,44 @@
+Dice UK Programming Challenge 1
+===============================
+
+Deadline: Feb 29th 2016
+-----------------------
+
+Allowed Programming Languages: Any scripted or compiled from this list (C, C++, C#, Delphi, Fortran, Java, Go) or open source where the compiler or interpreter can be installed either in Windows 8.1 or Ubuntu 14.04 LTS. Please include command line options for buildimg the compiler (or a link to them) or running the interpreter and command line options for compiling and if necessary running. Any programming language that isn't in the list above and is free or open source is ok.
+
+The Challenge
+=============
+
+Read a 500 (Wide) by 300 line text file called input.txt. It contains either * or spaces representing alive (*) or dead (space) cells in the grid. You must supply an initial input.txt that has exactly 7,500 alive cells. So the file will have 7,500 out of 150,000 cells as * and the rest as spaces plus end line markers for each of the 300 lines. Either Unix LF or Windows CR/LF is ok, so long as your program can read the file.
+
+Your program must then read this initial grid, then using the rules of Life generate the next 1,000 generations from it. See https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life 
+
+The rules for generating are:
+
+1. Any live cell with fewer than two live neighbours dies, as if caused by under-population.
+2. Any live cell with two or three live neighbours lives on to the next generation.
+3. Any live cell with more than three live neighbours dies, as if by over-population.
+4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction. 
+
+The Output
+==========
+Output the grid with the 1,000th generation to a text file called output.txt in the same place as your executable/script file using * and spaces as before. Note the initial generation that you supply in input.txt is generation 0, the one you should write out is generation 1000.
+
+Also write into this file two more lines after the grid. The first should be a count of the live cells in the grid and the second should be the total time in seconds it took to process the 1,000 generations. I.E. starting after the input.txt file was read until just before the output.txt file. The time should be written with four decimal places of accuracy. e.g. 3.6529. Or if it's really (sub- millisecond) fast, then 6 or 8 decimal places!
+
+E.g.
+1256
+3.6529
+
+Submitting Entries
+==================
+Please email dhbolton@hotmail.com with the subject line <b>Dice Programming Challenge One</b> and attach your source code (preferably zipped or rar’ed, 7ziped etc.) and the input.txt file and any instructions for compiling or running. No binaries please and don’t forget to include the instructions and commands for building, compiling running etc. 
+
+Winning Criteria
+================
+The most live cells remaining after 1,000 generations wins. Please include timing code (starting immediately after input.txt is read until immediately before output.txt is written) so in that in the case of a tie for number of live cells, the fastest wins. 
+
+Don't forget the deadline for entries is Feb 29th 2016. Results will be posted here on github.
+
+
+
